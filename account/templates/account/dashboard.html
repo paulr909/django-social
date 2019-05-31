@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h1>Dashboard</h1>
+                    {% with total_images_created=request.user.images_created.count %}
+                        <p>You have bookmarked <span class="badge badge-success">
+                            {{ total_images_created }}</span> image{{ total_images_created|pluralize }}</p>
+                    {% endwith %}
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div id="action-list">
+                        {% for action in actions %}
+                            {% include "actions/action/detail.html" %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Drag the following button to your bookmarks toolbar to bookmark images from
+                        other websites.</h5>
+                    <a href="javascript:{% include "bookmarklet_launcher.js" %}"
+                       class="btn btn-outline-success">Bookmark it</a>
+                    <hr class="mt-4 mb-4">
+                    <p>
+                        <a class="btn btn-outline-primary btn-sm" href="{% url "edit" %}">Edit profile</a> <a
+                            class="btn btn-outline-primary btn-sm" href="{% url "password_change" %}">Change
+                        password</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Log-in</h1>
+            <p>Please, use the following form to log-in:</p>
+            <form action="." method="post" novalidate>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-outline-primary btn-sm" type="submit" value="Log in">Log in</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

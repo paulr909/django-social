@@ -28,7 +28,7 @@ ALLOWED_HOSTS = [
     'django-social.com',
     'localhost',
     '127.0.0.1',
-    '98b37c01.ngrok.io'
+    'e2bddbbf.ngrok.io'
 ]
 
 # Application definition

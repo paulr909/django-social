@@ -10,7 +10,7 @@
             <img src="{{ request.GET.url }}" class="image-preview" alt="">
             <form action="." method="post" novalidate>
                 {% csrf_token %}
-                {{ form|cripsy }}
+                {{ form|crispy }}
                 <button class="btn btn-outline-primary btn-sm" type="submit">Bookmark it!</button>
             </form>
         </div>

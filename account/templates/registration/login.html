@@ -5,7 +5,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-4 mb-5">
+        <div class="col-md-4 offset-md-4">
             <h1>Log-in</h1>
             {% if form.errors %}
                 <p>
@@ -19,14 +19,11 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <input type="hidden" name="next" value="{{ next }}"/>
-                <br>
                 <button class="btn btn-outline-primary btn-sm" type="submit">Log in</button>
             </form>
             <br>
             <a class="btn btn-outline-primary btn-sm" href="{% url "password_reset" %}">Forgotten your password?</a>
-        </div>
-        <div class="col-md-4 offset-md-1">
-            <h2>Sign in with your social network</h2>
+            <h2 class="mt-4">Sign in with your social network</h2>
             <a class="btn btn-block btn-facebook" href="{% url "social:begin" "facebook" %}">Sign in with Facebook</a>
             <a class="btn btn-block btn-twitter" href="{% url "social:begin" "twitter" %}">Login with Twitter</a>
             <a class="btn btn-block btn-google" href="{% url "social:begin" "google-oauth2" %}">Login with Google</a>

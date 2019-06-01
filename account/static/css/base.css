@@ -2,6 +2,12 @@ body {
     font-family: sans-serif;
 }
 
+.nav-hello {
+    display: block;
+    padding: .5rem 0;
+    color: #fff;
+}
+
 .errorlist {
     color: #cc0033;
     float: left;
@@ -20,7 +26,7 @@ body {
 .social li {
     list-style: none;
     padding: 10px 20px;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px -40px;
 }
 
 .social li a {
@@ -43,7 +49,6 @@ body {
 }
 
 /* images */
-
 .image-preview, .image-detail {
     max-width: 300px;
     float: left;

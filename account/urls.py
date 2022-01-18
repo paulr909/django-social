@@ -1,7 +1,8 @@
 from django.contrib.auth import views as auth_views
 from django.urls import path
 
-from .views import dashboard, register, edit, user_list, user_follow, user_detail
+from .views import (dashboard, edit, register, user_detail, user_follow,
+                    user_list)
 
 urlpatterns = [
     # previous login view

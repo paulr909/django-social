@@ -10,7 +10,8 @@ from actions.models import Action
 from actions.utils import create_action
 from common.decorators import ajax_required
 
-from .forms import LoginForm, ProfileEditForm, UserEditForm, UserRegistrationForm
+from .forms import (LoginForm, ProfileEditForm, UserEditForm,
+                    UserRegistrationForm)
 from .models import Contact, Profile
 
 

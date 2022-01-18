@@ -1,6 +1,7 @@
 from django.urls import path
 
-from .views import image_ranking, image_like, image_list, image_create, image_detail
+from .views import (image_create, image_detail, image_like, image_list,
+                    image_ranking)
 
 app_name = "images"
 
